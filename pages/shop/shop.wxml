@@ -1,0 +1,61 @@
+<!--pages/shop/shop.wxml-->
+<view class="container">
+	<view class="header" style="margin-top:{{statusBarHeight}}">
+		<view class="header-title">
+			写锤子检讨书
+		</view>
+		<view class="oneWorld">
+			一键生成各类检讨文章
+		</view>
+	</view>
+	<!-- 轮播图 -->
+	<swiper 
+		indicator-dots="true" 
+		autoplay="true" 
+		interval="2500" 
+		duration="800" 	
+		circular="true">
+	  <swiper-item 
+		wx:for="{{bannerList}}" 
+		wx:key="objectId" 
+		data-link="{{item.link}}" 
+		data-dia="{{item.dia}}"
+		bindtap="tapBanner">
+	    <image mode="scaleToFill"  src="{{item.img.url}}"/>
+	  </swiper-item>
+	</swiper>
+	<van-search bind:focus="search"  placeholder="搜索模板" />
+	<view class="main">
+		<view class="shop-header">
+			<view bindtap="getFree" class="shop-type-title free {{isactive?'current':''}}">免费</view>
+			<view bindtap="getNotFree" class="shop-type-title nofree {{isactive?'':'current'}}">付费</view>
+		</view>
+		
+		<view class="list">
+			<view 
+				wx:for="{{templateList}}"  
+				wx:key="objectId" 
+				data-template="{{item}}" 
+				class="item"
+				bindtap="tapTemplate">
+				<view class="content">
+					<view class="title">
+						{{item.name}}
+					</view>
+					<view class="top">
+						<view class="name">{{item.author}}</view>
+					</view>
+					
+					<view class="buttom">
+						<view class="isFree" style="color:{{item.jtb == 0 ? 'rgba(48, 184, 156, 1)':'rgba(39, 134, 242, 1)'}}">{{item.jtb == 0 ? '免费下载':item.jtb+' 检讨币'}}</view>
+					</view>
+				</view>
+			</view>
+			
+			
+		</view>
+	</view>
+	
+	
+	
+</view>

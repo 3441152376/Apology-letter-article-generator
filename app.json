@@ -1,0 +1,67 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/login/login",
+        "pages/shop/shop",
+        "pages/tools/tools",
+        "pages/tools/toolDetail/toolDetail",
+        "pages/my/my",
+        "pages/my/myOrder/myOrder",
+        "pages/search/search",
+        "pages/show/show",
+        "pages/recharge/recharge",
+        "pages/makeTemplate/makeTemplate",
+        "pages/web/web",
+        "pages/about/about",
+        "pages/myBuy/myBuy",
+        "pages/handwriting/handwriting",
+        "pages/test/test",
+        "pages/hw/hw",
+        "pages/ai/AiMake/AiMake",
+        "pages/ai/AiChat/AiChat",
+        "pages/ai/chatList/chatList"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "写锤子检讨书",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
+    },
+    "tabBar": {
+        "custom": true,
+        "color": "#bfbfbf",
+        "selectedColor": "#3F51B5",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "white",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "images/home.png",
+                "selectedIconPath": "images/home_active.png"
+            },
+            {
+                "pagePath": "pages/shop/shop",
+                "text": "模板商店",
+                "iconPath": "images/shop.png",
+                "selectedIconPath": "images/shop_active.png"
+            },
+            {
+              "pagePath": "pages/tools/tools",
+              "text": "工具",
+              "iconPath": "images/shop.png",
+              "selectedIconPath": "images/shop_active.png"
+          },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "images/my.png",
+                "selectedIconPath": "images/my_active.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+
+    }
+}

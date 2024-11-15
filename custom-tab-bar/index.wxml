@@ -1,0 +1,19 @@
+
+<view class="tabBar">
+    <view class="top-line"></view>
+    <view 
+        class="tabBar-list"
+        wx:for="{{tabBar.list}}"
+        wx:key="index"
+        data-to="{{item.pagePath}}"
+        bindtap="switchTabBar"
+        id="{{index}}">
+        <view 
+            class="title" 
+            style="color:{{active == index ? tabBar.selectedColor:tabBar.color}}">
+            {{item.text}}
+        </view>
+        <view wx:if="{{active == index ?true:false}}" class="line"></view>
+    </view>
+    
+</view>

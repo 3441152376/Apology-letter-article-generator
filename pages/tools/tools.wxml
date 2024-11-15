@@ -1,0 +1,23 @@
+<view class="container">
+    <view class="header" style="margin-top:{{statusBarHeight}}">
+		<view class="header-title">
+			写锤子检讨书
+		</view>
+		<view class="oneWorld">
+			一键生成各类检讨文章
+		</view>
+	</view>
+
+    <!-- 工具区 -->
+    <view class="tools-list">
+        <view wx:for="{{toolsList}}" wx:key="name" class="tools-item">
+            <view class="link" bindtap="toolDetail" data-params="{{item}}" >
+                <image class="icon" src="{{item.icon}}" />
+                <view class="bottom">
+                    <view class="title">{{item.name}}</view>
+                    <image wx:if="{{item.vip}}" class="isvip" src="/images/VIP_white.png"/>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

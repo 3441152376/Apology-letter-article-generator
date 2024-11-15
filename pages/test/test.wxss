@@ -1,0 +1,31 @@
+/* pages/test/test.wxss */
+
+@font-face {
+    font-family: youth;
+    src: url(https://jts.egg404.cn/b.ttf);
+}
+
+.draw_canvas {
+    color: red;
+}
+
+.img {
+    width: 797px;
+    height: 1127px;
+    background-image: url(https://tuchuangs.com/imgs/2022/09/17/26d339f3c615fa3a.png)
+}
+
+.share__canvas1 {
+    /* background-color: blue; */
+    /* background-image: url(https://tuchuangs.com/imgs/2022/09/17/26d339f3c615fa3a.png) */
+}
+
+.share__canvas1-text {
+    font-family: youth;
+    /* height: 100px; */
+}
+
+.share__canvas {
+    height: 797px;
+    width: 1127px;
+}

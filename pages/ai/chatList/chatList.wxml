@@ -1,0 +1,67 @@
+<view class="header" style="padding-top:{{statusBarHeight}}">
+    <view class="header-left">
+         <image src="/images/back.png"  bindtap="back"/>
+        <view class="header-title">
+            对话列表
+        </view>
+    </view>
+</view>
+
+<!-- 对话列表 -->
+<view class="chatList">
+
+    <view class="block" wx:if="{{chatList.length == 0}}" ></view>
+    <navigator 
+        class="chatListItem" 
+        style="background-color: {{index % 2 == 0?'rgba(48, 184, 156, 0.15)':'rgba(42, 130, 228, 0.15)'}};"
+        wx:for="{{chatList}}"
+        wx:key="index"
+        url="../AiChat/AiChat?chat_id={{item.chat_id}}" 
+        >
+        <image src="/images/ai.png" />
+        <view class="chat-content">
+            <view class="createTime">
+                <view class="time">
+                    {{item.createdAt}}
+                </view>
+            </view>
+            <view class="createContent" style="color:{{index % 2 == 0?' rgba(48, 184, 156, 1)':'rgba(42, 130, 228, 1)'}}">
+                {{item.content}}
+            </view>
+        </view>
+    </navigator>
+
+</view>
+
+<navigator class="addchat" url="../AiMake/AiMake">
+    <image src="/images/add_black.png" />
+    <view >创建新对话</view>
+</navigator>
+
+<!-- 悬浮按钮 -->
+<navigator class="add" url="../AiMake/AiMake">
+    <image src="/images/add.png" />
+</navigator> 
+
+<!-- 删除弹出层 -->
+<van-popup
+		show="{{ PopupShow }}"
+		round
+		position="bottom"
+		bind:close="Popup"
+		lock-scrol
+		z-index="99999"
+	>
+	 	<view class="popup-content">
+			<view class="popup-header">
+				<view class="popup-header-title">使用提示</view>
+			</view>
+			<view class="notice-content">
+				<text user-select>此功能需要较高成本，普通用户使用需要观看广告且每日只能使用五次，会员每日可免广告使用十次，之后每次使用一个检讨币，您可开通会员免去广告，感谢您的理解</text>
+			</view>
+			<view class="deleteMessage" bindtap="noShowGptNotice">
+				不再提示
+			</view>
+		</view>
+		
+</van-popup>

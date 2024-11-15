@@ -1,0 +1,37 @@
+<!--pages/about/about.wxml-->
+<view class="bar-header" style="padding-top:{{statusBarHeight}}">
+	<image src="/images/back.png"  bindtap="back"/>
+</view>
+
+<view class="header">
+	<image src="../../images/logo.png"/>
+	<view class="Htitle">
+		写锤子检讨书
+	</view>
+	<view class="version">
+		小程序版
+	</view>
+	<view class="contact">
+		<button bind:tap="kf" class="btn kf">
+			联系客服
+		</button>
+		<view class="btn qq" bindtap="copy">
+			加入QQ群
+		</view>
+	</view>
+	
+</view>
+<view class="title">
+	<view class="side"></view>
+	<view class="titleContent">我们</view>
+</view>
+<view class="content">
+	我们是一支年轻的团队。我们的团队成员均为00后和90后，充满了朝气和创新精神;\n
+	我们是一支专注的团队。我们坚信，优秀的团队源自客户的信任，只有专注，才能做到优秀;\n
+	我们是一支有梦想的团队。我们来自全国各地，因为一个共同的梦想:在做一家真正优秀的互联网企业。
+</view>
+<view class="bottom">
+	<view class="bq">
+		Copyright@2021-2022山禾科技版权所有
+	</view>
+</view>

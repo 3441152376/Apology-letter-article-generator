@@ -1,0 +1,79 @@
+<button bindtap="drawImage">11</button>
+<view class="main">
+    <movable-area class="move-area" scale-area="true">
+        <movable-view class="move-view" 
+        direction="all" 
+        scale-value="1"
+        scale-max="4"
+        scale="true"
+        out-of-bounds="true"
+        >
+        
+        <view class="share__canvas share__canvas1">
+            <view  class="draw_canvas content" data-type="background-image">
+                <view class="draw_canvas article" >
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="来" >来</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="好">好</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="人">人</text>
+                    <text class="draw_canvas worldsStyle" data-type="text" data-text="看">看</text>
+                </view>
+                
+            </view>
+        </view>
+        <canvas canvas-id="canvas1" class="canvas"></canvas>
+        
+        </movable-view>
+    </movable-area>
+</view>

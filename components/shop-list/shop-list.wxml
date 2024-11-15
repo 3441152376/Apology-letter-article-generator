@@ -1,0 +1,23 @@
+<!--components/shop-list.wxml-->
+<view class="list">
+	<view 
+		wx:for="{{templateList}}"  
+		wx:key="objectId" 
+		data-template="{{item}}" 
+		class="item"
+		bindtap="tapTemplate">
+		<view class="content">
+			<view class="top">
+				<image src="../../images/logo.png"/>
+				<view class="name">{{item.author}}</view>
+			</view>
+			<view class="title">
+				{{item.name}}
+			</view>
+			<view class="buttom">
+				<image wx:if="{{item.jtb != 0}}" src="../../images/coins.png" />
+				<view class="isFree">{{item.jtb == 0 ? '免费':item.jtb+' 检讨币'}}</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,22 @@
+<view class="header" style="padding-top:{{statusBarHeight}}">
+	<image src="/images/back.png"  bindtap="back"/>
+</view>
+<view class="h1">充值订单</view>
+
+<view class="order-list">
+    <view class="order-item" wx:for="{{orderList}}" wx:key="objectId">
+        <view class="top">
+            <view class="desc">{{item.description}}</view>
+            <view class="status">{{!item.ispay?'未支付':item.ishandle?'已完成':'未处理'}}</view>
+        </view>
+        <view class="bottom">
+            <view class="money">
+               ￥{{item.money}}
+            </view>
+            <view class="orderNum">
+                订单号：{{item.out_trade_no}}
+            </view>
+            <view class="orderTime">创建时间：{{item.createdAt}}</view>
+        </view>
+    </view>
+</view>

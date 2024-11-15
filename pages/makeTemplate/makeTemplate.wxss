@@ -1,0 +1,44 @@
+/* pages/makeTemplate/makeTemplate.wxss */
+
+page {
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    width: 100%;
+    height: 100rpx;
+    padding-left: 30rpx;
+    background-color: #fff;
+}
+
+.header image {
+    width: 45rpx;
+    height: 45rpx;
+    padding: 10rpx;
+}
+
+.main {
+    text-align: center;
+    padding-top: 100rpx;
+}
+
+.main image {
+    margin-top: 100rpx;
+}
+
+.h1 {
+    font-size: 40rpx;
+    color: rgba(48, 184, 156, 1);
+    font-weight: 700;
+}
+
+.h2 {
+    font-size: 35rpx;
+    color: #30b89c;
+    font-weight: 600;
+    margin-top: 20rpx;
+}

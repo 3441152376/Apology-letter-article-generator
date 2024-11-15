@@ -1,0 +1,58 @@
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10rpx 0;
+}
+
+.list .item {
+    width: 50%;
+    overflow: hidden;
+}
+
+.list .item .content {
+    border: 2rpx solid #eee;
+    padding: 25rpx;
+    margin: 20rpx 10rpx;
+    overflow: hidden;
+    border-radius: 10rpx;
+}
+
+.list .item .content .top {
+    display: flex;
+    align-items: center;
+}
+
+.list .item .content .top image {
+    width: 55rpx;
+    height: 55rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.list .item .content .top .name {
+    flex: 1;
+    width: 100%;
+    font-size: 30rpx;
+    color: #424242;
+}
+
+.list .item .content .title {
+    font-size: 35rpx;
+    margin: 25rpx 0;
+    font-weight: 600;
+}
+
+.list .item .content .buttom {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 28rpx;
+    color: #1459F1;
+    margin-top: 10rpx;
+}
+
+.list .item .content .buttom image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 15rpx;
+}

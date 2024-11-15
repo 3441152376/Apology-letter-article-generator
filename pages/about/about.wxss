@@ -1,0 +1,96 @@
+/* pages/about/about.wxss */
+
+.bar-header {
+    /* display: flex; */
+    /* position: fixed; */
+    top: 0;
+    align-items: center;
+    width: 100%;
+    height: 100rpx;
+    padding-left: 30rpx;
+    background-color: #fff;
+}
+
+.bar-header image {
+    width: 45rpx;
+    height: 45rpx;
+    padding: 10rpx;
+}
+
+.title {
+    margin: 0 30rpx;
+    display: flex;
+}
+
+.title .side {
+    width: 7rpx;
+    background-color: #30b89c;
+    border-radius: 50rpx;
+    padding: 5rpx 0;
+    margin-right: 20rpx;
+}
+
+.title .titleContent {
+    font-size: 35rpx;
+}
+
+.header {
+    text-align: center;
+    padding: 30rpx;
+    /* margin-top: 120rpx; */
+}
+
+.header image {
+    width: 155rpx;
+    height: 150rpx;
+}
+
+.header .Htitle {
+    font-size: 35rpx;
+    font-weight: 600;
+    margin-top: 20rpx;
+}
+
+.header .version {
+    font-size: 28rpx;
+    color: #737373;
+    margin-top: 10rpx;
+}
+
+.contact {
+    display: flex;
+}
+
+.contact .btn {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    border: 3rpx solid #30b89c;
+    border-radius: 15rpx;
+    margin: 30rpx;
+    padding: 15rpx;
+    color: #30b89c;
+    font-size: 30rpx;
+    background-color: #fff;
+}
+
+.content {
+    padding: 0 30rpx;
+    color: #737373d0;
+    line-height: 1.8;
+    margin-top: 30rpx;
+    font-size: 32rpx;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 30rpx;
+    width: 100%;
+    text-align: center;
+}
+
+.bq {
+    font-size: 25rpx;
+    color: #737373d1;
+}

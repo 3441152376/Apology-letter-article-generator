@@ -1,0 +1,127 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+	<view class="header" style="margin-top:{{statusBarHeight}}">
+		<view class="header-title">
+			写锤子检讨书
+		</view>
+		<view class="oneWorld">
+			一键生成各类检讨文章
+		</view>
+	</view>
+	<view class="userInfo" style="background: {{userType == '普通用户'?'':'rgba(39, 134, 242, 0.06)'}}">
+		<view class="top" bindtap="gotoRecharge">
+			<view class="left">
+				<image class="avater" src="{{avatarUrl||'../../images/logo.png'}}"/>
+				<view class="user">
+					<view class="name">
+						{{name}}
+					</view>
+					<!-- <view bindtap="copy" class="id"  >
+						ID:{{objectId}}
+					</view> -->
+					<view class="userType" style="color:{{userType == '普通用户'?'':'#2786f2'}}">
+						<image wx:if="{{userType == '普通用户'?false:true}}" src="/images/vip.png" />{{userType}}
+					</view>
+				</view>
+			</view>
+			<view class="right">
+				<image src="/images/inter_select.png"></image>
+			</view>
+			
+		</view>
+		<view class="bottom">
+			<view class="ggb">
+				<view class="ggb-title">广告币</view>
+				<view class="count">{{ggb}}</view>
+			</view>
+			<view class="jtb">
+				<view class="jtb-title">检讨币</view>
+				<view class="count">{{jtb}}</view>
+			</view>
+		</view>
+	</view>
+	
+	<!-- <view class="Recharge item" bindtap="gotoRecharge">
+		<image src="../../images/recharge.png" />
+		<view class="RechargeTitle">充值</view>
+	</view> -->
+	
+	<view class="titleContent">订单</view>
+
+	<view class="function-list">
+		<navigator url="./myOrder/myOrder" class="item" >
+			<view class="left">
+				<image src="../../images/makeTemplate.png" />
+				<view class="mTitle">充值订单</view>
+			</view>
+			<view class="right">
+				<image src="/images/inter_select.png"></image>
+			</view>
+			
+		</navigator>	
+	</view>
+
+	<view class="titleContent">模板</view>
+
+	<view class="function-list">
+		<view class="item" bindtap="toMakeTemplate">
+			<view class="left">
+				<image src="../../images/makeTemplate.png" />
+				<view class="mTitle">制作模板</view>
+			</view>
+			<view class="right">
+				<image src="/images/inter_select.png"></image>
+			</view>
+			
+		</view>
+		<view class="item" bindtap="toMyBuy">
+			<view class="left">
+				<image src="../../images/myBuy.png" />
+				<view class="mTitle">我的购买</view>
+			</view>
+			<view class="right">
+				<image src="/images/inter_select.png"></image>
+			</view>
+			
+		</view>
+		
+	</view>
+
+	<view class="titleContent">其他</view>
+	<view class="function-list">
+		<view class="item" bindtap="toAbout">
+			<view class="left">
+				<image src="../../images/about.png" />
+				<view class="mTitle">关于</view>
+			</view>
+			<view class="right">
+				<image src="/images/inter_select.png"></image>
+			</view>
+			
+		</view>
+		<view class="item" bindtap="gzhshow">
+			<view class="left">
+				<image src="../../images/wechat.png" />
+				<view class="mTitle">关注B站</view>
+			</view>
+			<view class="right">
+				<image src="/images/inter_select.png"></image>
+			</view>
+			
+		</view>
+		<view class="item" bindtap="downapp">
+			<view class="left">
+				<image src="../../images/app.png" />
+				<view class="mTitle">关注APP</view>
+			</view>
+			<view class="right">
+				<image src="/images/inter_select.png"></image>
+			</view>
+			
+		</view>
+		
+	</view>
+
+	<view class="bq">泸州山禾网络科技有限责任公司 出品</view>
+	
+</view>

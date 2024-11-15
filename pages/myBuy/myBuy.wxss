@@ -1,0 +1,90 @@
+/* pages/myBuy/myBuy.wxss */
+
+.header {
+    display: flex;
+    /* position: fixed; */
+    /* top: 0; */
+    align-items: center;
+    width: 100%;
+    height: 100rpx;
+    padding-left: 30rpx;
+    background-color: #fff;
+}
+
+.h1 {
+    font-size: 50rpx;
+    /* margin-top: 155rpx; */
+    margin-left: 30rpx;
+    margin-bottom: 35rpx;
+}
+
+.header image {
+    width: 45rpx;
+    height: 45rpx;
+    padding: 10rpx;
+}
+
+.list {
+    /* padding-top: 80rpx; */
+}
+
+.list .item {
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    margin: 20rpx 30rpx;
+    border-radius: 15px;
+}
+
+.list .item .content {
+    /* border: 2rpx solid #eee; */
+    padding: 25rpx;
+    margin: 20rpx 10rpx;
+    overflow: hidden;
+    /* border-radius: 10rpx; */
+}
+
+.list .item .content .top {
+    display: flex;
+    align-items: center;
+}
+
+.list .item .content .top image {
+    width: 55rpx;
+    height: 55rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.list .item .content .top .name {
+    flex: 1;
+    font-size: 35rpx;
+    margin: 25rpx 0;
+    font-weight: 600;
+}
+
+.list .item .content .title {
+    width: 100%;
+    font-size: 30rpx;
+    color: #424242;
+}
+
+.list .item .content .buttom {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 28rpx;
+    color: rgba(39, 134, 242, 1);
+    margin-top: 30rpx;
+}
+
+.list .item .content .buttom image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 15rpx;
+}
+
+.none {
+    width: 100%;
+    text-align: center;
+    padding-top: 50rpx;
+}

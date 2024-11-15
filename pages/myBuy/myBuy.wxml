@@ -1,0 +1,31 @@
+<!--pages/myBuy/myBuy.wxml-->
+<view class="header" style="padding-top:{{statusBarHeight}}">
+	<image src="/images/back.png"  bindtap="back"/>
+</view>
+<view class="h1">我的购买</view>
+<view class="list">
+	<view
+		wx:if="{{myTemplate.length >= 0}}"
+		wx:for="{{myTemplate}}"  
+		wx:key="objectId" 
+		data-template="{{item}}" 
+		class="item"
+		bindtap="importShow">
+		<view class="content">
+			<view class="top">
+				<view class="name">{{item.name}}</view>
+			</view>
+			<view class="title">
+				{{item.createdAt}}
+			</view>
+			<view class="buttom">
+				<view class="import">
+					点击导入
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="none" wx:if="{{myTemplate.length <= 0}}">
+		我的购买空空如也~
+	</view>
+</view>

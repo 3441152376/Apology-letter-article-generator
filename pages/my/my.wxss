@@ -1,0 +1,170 @@
+/* pages/my/my.wxss */
+
+.container {
+    padding-bottom: 120rpx;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 145rpx;
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.06);
+    padding-bottom: 15rpx;
+}
+
+.header .header-title {
+    color: rgba(0, 0, 0, 1);
+    font-size: 40rpx;
+    font-weight: 700;
+}
+
+.header .oneWorld {
+    font-size: 30rpx;
+    color: rgba(0, 0, 0, 0.45);
+    margin-top: 7rpx;
+}
+
+.userInfo {
+    margin: 30rpx;
+    border-radius: 15rpx;
+    background-color: #fff;
+    padding: 0rpx 10rpx;
+    /* box-shadow: 0 1px 5px rgba(18, 18, 18, 0.1); */
+    background: rgba(48, 184, 156, 0.06);
+    padding-top: 30rpx;
+    padding-bottom: 1rpx;
+}
+
+.userInfo .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.06);
+    padding-bottom: 30rpx;
+    margin: 0 30rpx;
+}
+
+.userInfo .top .left {
+    display: flex;
+    align-items: center;
+}
+
+.userInfo .top .left .avater {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    margin-right: 40rpx;
+}
+
+.userInfo .top .left .name {
+    flex: 1;
+    width: 100%;
+    font-size: 35rpx;
+    color: rgba(0, 0, 0, 1);
+}
+
+.userInfo .top .userType {
+    font-size: 30rpx;
+    color: rgba(0, 0, 0, 0.45);
+    margin-top: 10rpx;
+}
+
+.userInfo .top .userType image {
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
+    margin-right: 15rpx;
+}
+
+.userInfo .top .right image {
+    width: 45rpx;
+    height: 45rpx;
+    padding: 10rpx;
+}
+
+.userInfo .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25rpx 35rpx;
+}
+
+.userInfo .bottom .ggb {
+    flex: 1;
+    font-size: 30rpx;
+}
+
+.userInfo .bottom .jtb {
+    /* display: flex; */
+    flex: 1;
+}
+
+.userInfo .bottom .jtb .jtb-title {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 32rpx;
+}
+
+.userInfo .bottom .ggb .count {
+    font-size: 50rpx;
+    color: rgba(48, 184, 156, 1);
+}
+
+.userInfo .bottom .ggb .ggb-title {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 32rpx;
+}
+
+.userInfo .bottom .jtb .count {
+    font-size: 50rpx;
+    color: #2786f2;
+}
+
+.item {
+    display: flex;
+    /* border: 3rpx solid #1459F1; */
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15rpx;
+    margin: 0rpx 20rpx;
+    padding: 40rpx 25rpx;
+    color: rgba(0, 0, 0, 1);
+    font-size: 30rpx;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.06);
+}
+
+.item .left {
+    display: flex;
+}
+
+.item .left image {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 30rpx;
+}
+
+.item .right image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.titleContent {
+    font-size: 32rpx;
+    color: rgba(0, 0, 0, 0.45);
+    margin: 30rpx;
+}
+
+.function-list {
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0 30rpx;
+}
+
+.bq {
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 24rpx;
+    text-align: center;
+    margin: 40rpx 0;
+}

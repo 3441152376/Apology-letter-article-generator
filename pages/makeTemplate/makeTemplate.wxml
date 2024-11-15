@@ -1,0 +1,14 @@
+<!--pages/makeTemplate/makeTemplate.wxml-->
+<view class="header" style="padding-top:{{statusBarHeight}}">
+	<image src="/images/back.png"  bindtap="back"/>
+</view>
+<view class="main">
+	<image src="../../images/downapppic.png"/>
+	<view class="h1">
+		应用商店下载写锤子检讨书APP版
+	</view>
+	<view class="h2">
+		一起来制作模板赚钱吧！
+	</view>
+</view>
+

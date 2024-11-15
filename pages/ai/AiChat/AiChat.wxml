@@ -1,0 +1,133 @@
+<view class="header" style="padding-top:{{statusBarHeight}}px">
+    <view class="header-left">
+         <image src="/images/back.png"  bindtap="back"/>
+    </view>
+    <view class="header-t">
+        <view class="header-title">
+                写锤子检讨书
+        </view>
+        <view class="header-title2">
+                AI对话式文章生成
+        </view>
+    </view>
+</view>
+<view 
+    class="chat" 
+    style="padding-top:{{statusBarHeight + 55}}px;padding-bottom: {{bottomInputBoxHeight}}px;"
+
+    >
+    <block wx:for="{{chatList}}" wx:key="index">
+        <view wx:if="{{item.type === 'user'}}" class="my">
+            <text class="mychat" selectable="{{true}}">{{item.content}}</text>
+            <image class="avater" src="/images/tx.jpg" />
+        </view>
+        <view wx:if="{{item.type === 'gpt'}}" class="gpt">
+            <image class="avater" src="/images/ai.png" />
+            <view class="replay-content">
+                <text user-select selectable="{{true}}" class="gptchat">{{item.content}}</text>
+                <view class="loading" wx:if="{{item.content == 'AI正在思考中...'}}">
+                    <van-loading type="spinner" color="#30b89c" />
+                </view>
+                <block wx:if="{{!(index == 0 && item.type == 'gpt')}}">
+                    <view bind:tap="editChat" data-chatIndex="{{index}}" class="editChatBox" wx:if="{{item.content.length > 20}}">
+                        <image src="/images/editChat.png" />
+                    </view>
+                </block>
+            </view>
+        </view>
+    </block>
+    
+</view>
+<view class="bottom">
+    
+    <scroll-view 
+                class="suggest" 
+                scroll-x="{{true}}"
+                scroll-with-animation="{{true}}"
+                enhanced="{{true}}"
+                show-scrollbar="{{false}}"
+                >
+        <view class="suggestItem" 
+            wx:for="{{suggests}}" 
+            wx:key="index"
+            data-detail="{{item.detail}}"
+            bindtap="adoptSuggest"
+            >
+            {{item.title}}
+        </view>
+    </scroll-view>
+       
+    <view bind:tap="editPopup" class="unfold" style="{{inputFocus?'display:block':'display:none'}}">
+        <image src="/images/unfold.png" />
+    </view>
+    <view class="inputBox">
+        <image bind:tap="deletePopup" src="/images/delete.png" />
+        <view class="input">
+            <input placeholder="请输入您的进一步需求"
+                model:value="{{inputContent}}" 
+                bindfocus="inputFocus"
+				bindblur="inputFocus"
+             />
+        </view>
+        <view class="send" bind:tap="send">
+            <image src="/images/send.png" />
+        </view>
+    </view>
+    
+</view>
+
+<!-- 删除弹出层 -->
+<van-popup
+		show="{{ deletePopupShow }}"
+		round
+		position="bottom"
+		bind:close="deletePopup"
+		lock-scrol
+		z-index="99999"
+	>
+	 	<view class="popup-content">
+			<view class="popup-header">
+				<view class="popup-header-title">删除对话</view>
+			</view>
+			<view class="notice-content">
+				<text user-select>提醒：\n\n删除此对话将失去此次对话的上下文记忆，并且清空所有聊天记录。\n\n若你想要AI继续维持此次对话，可选择仅清空聊天记录。</text>
+			</view>
+			<view class="deleteMessage" bindtap="deleteMessage">
+				仅清空对话记录
+			</view>
+            <view class="deleteChat" bindtap="deleteChat">
+				删除对话
+			</view>
+		</view>
+		
+</van-popup>
+
+<!-- 编辑弹出层 -->
+<van-popup
+		show="{{ editPopupShow }}"
+		round
+		position="bottom"
+		bind:close="editPopup"
+		lock-scroll="{{true}}"
+		z-index="99999"
+	>
+	 	<view class="popup-content">
+			<view class="popup-header">
+				<view class="popup-header-title">全屏编辑</view>
+                <image src="/images/finish.png" bindtap="editPopup" />
+			</view>
+			<view class="notice-content">
+				<view class="popupTnput">
+                    <textarea class="inputText" 
+                            model:value="{{inputContent}}" 
+                            placeholder="请输入您的进一步需求"
+                            maxlength="-1"
+                            auto-height="true"
+
+                    />
+                </view>
+			</view>
+			
+		</view>
+		
+</van-popup>

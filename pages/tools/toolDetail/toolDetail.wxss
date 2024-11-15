@@ -1,0 +1,71 @@
+.header {
+    display: flex;
+    /* position: fixed; */
+    /* top: 0; */
+    align-items: center;
+    width: 100%;
+    height: 100rpx;
+    padding-left: 30rpx;
+    background-color: #fff;
+    z-index: 99;
+}
+
+.header image {
+    width: 45rpx;
+    height: 45rpx;
+    padding: 10rpx;
+}
+
+.h1 {
+    font-size: 50rpx;
+    /* margin-top: 155rpx; */
+    margin-left: 30rpx;
+    margin-bottom: 35rpx;
+}
+
+.input-area {
+    padding: 30rpx;
+}
+
+.input {
+    padding: 35rpx;
+    border-radius: 30rpx;
+    margin-bottom: 20rpx;
+    background-color: rgba(0, 0, 0, 0.04);
+    border: 4rpx solid rgba(0, 0, 0, 0);
+    transition: all .2s;
+}
+
+.getFocus {
+    border: 4rpx solid rgba(48, 184, 156, 1);
+    background-color: #fff;
+}
+
+.btn {
+    margin: 0rpx 30rpx 30rpx 30rpx;
+    color: #fff;
+    border-radius: 10rpx;
+}
+
+.btn button {
+    height: 110rpx;
+    line-height: 110rpx;
+    color: #fff;
+    font-size: 34rpx;
+    /* background-color: #1459F1; */
+    border-radius: 15px;
+    background: rgba(48, 184, 156, 1);
+    /* margin-top: 40rpx; */
+}
+
+.result-title {
+    margin: 30rpx;
+    color: rgba(48, 184, 156, 1);
+}
+
+.content {
+    margin: 30rpx;
+    border-radius: 10rpx;
+    border: 2rpx solid #eee;
+    padding: 20rpx;
+}

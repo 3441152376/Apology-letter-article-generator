@@ -1,0 +1,17 @@
+<!--pages/test/test.wxml-->
+<text>pages/test/test.wxml</text>
+<button bindtap="drawImage">11</button>
+ 
+<view class="share__canvas share__canvas1">
+    <view class="share__canvas1-text draw_canvas" 
+        data-type="text" data-text="这是一段无边距文字1">
+        这是一段无边距文字
+    </view>
+    <view class="draw_canvas img" data-type="background-image">
+
+    </view>
+    <!-- <image data-type="image" class="draw_canvas" data-url="/images/paper/A4.png" src="/images/logo.png" ></image> -->
+    <!-- <image class="draw_canvas img" data-type="image"  data-url="/images/paper/A4.png"  src="/images/paper/A4.png" mode="heightFix" ></image> -->
+</view>
+<canvas canvas-id="canvas1" class="share__canvas"></canvas>
+

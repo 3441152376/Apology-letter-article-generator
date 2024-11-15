@@ -1,0 +1,14 @@
+/* pages/login/login.wxss */
+
+.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: rgba(48, 184, 156, 1);
+    color: #fff;
+    font-size: 34rpx;
+}

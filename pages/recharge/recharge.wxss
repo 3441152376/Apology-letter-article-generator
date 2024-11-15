@@ -1,0 +1,307 @@
+/* pages/recharge/recharge.wxss */
+
+.header {
+    display: flex;
+    /* position: fixed; */
+    /* top: 0; */
+    align-items: center;
+    width: 100%;
+    height: 100rpx;
+    padding-left: 30rpx;
+    background-color: #fff;
+    z-index: 99;
+}
+
+.header image {
+    width: 45rpx;
+    height: 45rpx;
+    padding: 10rpx;
+}
+
+.h1 {
+    font-size: 50rpx;
+    /* margin-top: 155rpx; */
+    margin-left: 30rpx;
+    margin-bottom: 35rpx;
+}
+
+.my-card {
+    margin: 30rpx;
+    padding: 0 30rpx;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.my-card .avater {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    margin-top: 30rpx;
+}
+
+.my-card .name {
+    font-size: 34rpx;
+    margin-top: 10rpx;
+    color: rgba(0, 0, 0, 1);
+}
+
+.my-card .userid {
+    font-size: 30rpx;
+    margin-top: 5rpx;
+    color: rgba(0, 0, 0, 0.438);
+}
+
+.myCard-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35rpx 0;
+    border-top: 1rpx solid rgba(0, 0, 0, 0.06);
+    margin-top: 30rpx;
+}
+
+.myCard-bottom .expire {
+    font-size: 28rpx;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.myCard-bottom .userType {
+    font-size: 30rpx;
+    color: rgba(39, 134, 242, 1);
+    margin-top: 10rpx;
+}
+
+.myCard-bottom .userType image {
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
+    margin-right: 15rpx;
+}
+
+.my-wallet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25rpx 35rpx;
+    border-radius: 15px;
+    background: rgba(39, 134, 242, 0.06);
+    padding: 30rpx;
+}
+
+.my-wallet .ggb {
+    flex: 1;
+    font-size: 30rpx;
+}
+
+.my-wallet .jtb {
+    /* display: flex; */
+    flex: 1;
+}
+
+.my-wallet-title {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 32rpx;
+}
+
+.my-wallet .count {
+    font-size: 50rpx;
+    color: rgba(48, 184, 156, 1);
+}
+
+.tab-menu {
+    display: flex;
+    align-items: center;
+    margin: 0rpx 30rpx;
+    height: 100rpx;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    border-radius: 15px;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 32rpx;
+    transition: all .1s;
+}
+
+.menu-item.actived {
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 1);
+}
+
+.recharge-item {
+    margin: 30rpx;
+}
+
+.rechargeVip {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rechargeVip .item {
+    flex: 1;
+    /* text-align: center; */
+    padding: 30rpx;
+    margin: 10rpx;
+    transition: all .2s;
+    border-radius: 15px;
+    border: 6rpx solid rgba(0, 0, 0, 0.05);
+}
+
+.rechargeJtb {
+    margin: 30rpx 0;
+}
+
+.rechargeJtb .item,
+.getVip-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 6rpx solid rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    padding: 18rpx;
+    margin: 30rpx 0;
+    transition: all .2s;
+}
+
+.rechargeJtb .item .pirce {
+    /* display: flex; */
+    /* align-items: flex-end; */
+    text-align: right;
+}
+
+.desc {
+    color: rgba(0, 0, 0, 1);
+    font-size: 30rpx;
+}
+
+.descJtb {
+    color: rgba(0, 0, 0, 1);
+    font-size: 32rpx;
+    margin: 20rpx 8rpx;
+}
+
+.rechargeBtn {
+    border-radius: 15px;
+    background: rgba(48, 184, 156, 1);
+    color: #fff;
+    width: 100%;
+    margin-top: 20rpx;
+}
+
+.rechargeKmBtn {
+    border-radius: 15px;
+    background: rgba(48, 184, 156, 1);
+    color: #fff;
+    /* margin-top: 20rpx; */
+    margin: 30rpx;
+}
+
+.money {
+    display: flex;
+    align-items: flex-end;
+    font-size: 48rpx;
+    font-weight: 700;
+    /* margin-bottom: 10rpx; */
+    color: rgba(0, 0, 0, 1);
+}
+
+.money .money-icon {
+    font-size: 32rpx;
+}
+
+.old_money {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 28rpx;
+}
+
+.otherSay {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 26rpx;
+    margin: 30rpx;
+}
+
+.line {
+    width: 100%;
+    height: 2rpx;
+    background-color: rgba(0, 0, 0, 0.06);
+    margin: 40rpx 30rpx;
+}
+
+.adReward {
+    padding: 30rpx;
+}
+
+.get-vip-ggb {
+    color: #30b89c;
+}
+
+.little-title {
+    font-size: 28rpx;
+    color: rgba(0, 0, 0, 0.45);
+    margin: 30rpx 30rpx 0 30rpx;
+}
+
+.ditel {
+    color: rgba(0, 0, 0, 1);
+    font-size: 32rpx;
+    margin: 20rpx 30rpx;
+}
+
+.kf {
+    margin: 30rpx;
+    border-radius: 15px;
+    border: none;
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.qy {
+    padding: 30rpx;
+}
+
+.qy .item {
+    /* width: 33.33%; */
+    /* text-align: center; */
+    margin: 40rpx 0;
+}
+
+.qy .item image {
+    width: 60rpx;
+    height: 60rpx;
+    margin-bottom: 10rpx;
+}
+
+.qy-title {
+    font-size: 32rpx;
+    color: rgba(48, 184, 156, 1);
+}
+
+.qy-detail {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 28rpx;
+}
+
+.rechargeVip .actived,
+.rechargeJtb .actived,
+.getVip .actived {
+    border: 6rpx solid #30b89c;
+}
+
+.rechargeVip .actived .desc,
+.rechargeVip .actived .money {
+    color: rgba(48, 184, 156, 1);
+}
+
+input {
+    background-color: #Eee;
+    padding: 20rpx;
+    margin: 30rpx;
+    border-radius: 15rpx;
+}

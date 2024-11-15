@@ -1,0 +1,97 @@
+<!--pages/show/show.wxml-->
+<view class="top-header" style="padding-top:{{statusBarHeight}}">
+	<image src="/images/back.png"  bindtap="back"/>
+	<view class="left">
+		<view class="topic">
+			{{topic}}
+		</view>
+		<view class="number" wx:if="{{!chatgpt}}">
+			<view class="">
+				{{actualNumber}} 字
+			</view>
+			
+		</view>
+	</view>
+</view>
+	
+<view class="content">
+	<text wx:if="{{!isEdit}}" class="show" decode="true" user-select="true">{{article}}</text>
+	<textarea wx:if="{{isEdit}}" class="edit" maxlength="-1" 	auto-height model:value="{{article}}" />
+</view>
+
+<view class="bottom-tools">
+	<view class="tools-item" bind:tap="copy">
+		<image src="/images/copy.png" />
+	</view>
+	<view class="tools-item" bind:tap="edit">
+		<image src="{{isEdit?'/images/check_active.png':'/images/check.png'}}" />
+	</view>
+	<view wx:if="{{!chatgpt}}" class="tools-item" bind:tap="refresh">
+		<image src="/images/update.png" />
+	</view>
+	
+	<!-- 悬浮按钮 -->
+	<view class="add" bindtap="toHandwriting">
+		<image src="/images/hand.png" />
+	</view> 
+</view>
+
+<!-- 悬浮按钮 -->
+<!-- <view class="add" bindtap="toHandwriting">
+	<van-icon name="edit" color="#fff" size="25" />
+</view>  -->
+
+<van-action-sheet
+	show="{{show}}" 
+	title="文章工具"
+	close-on-click-overlay="true"
+	z-index="9999"
+	bind:close="onClose">
+  <view class="sheet-content">
+	<view class="title">
+		<view class="side"></view>
+		<view class="titleContent">手写体</view>
+	</view>
+	<view class="font-list">
+		<scroll-view class="scroll-wrap" scroll-x >
+			<view
+				class="font-item">
+				<view class="font-content">
+					<view class="font-show">检讨</view>
+					<view class="font-title">
+						小学生手写体
+					</view>
+				</view>
+			</view> 
+			<view
+				
+				class="font-item ">
+				<view class="font-content">
+					<view class="font-show current">检讨</view>
+					<view class="font-title">
+						小学生手写体
+					</view>
+				</view>
+			</view> 
+			<view
+				class="font-item">
+				<view class="font-content">
+					<view class="font-show">检讨</view>
+					<view class="font-title">
+						小学生手写体
+					</view>
+				</view>
+				<view class="cover">
+					<van-icon name="down" size="30" />
+					<view >下载</view>
+				</view>
+			</view> 
+			
+		</scroll-view>
+	</view>
+	<view class="title">
+		<view class="side"></view>
+		<view class="titleContent">背景</view>
+	</view>
+  </view>
+</van-action-sheet>

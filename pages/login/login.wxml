@@ -1,0 +1,4 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+	<button bindtap="login">授权用户信息</button>
+</view>

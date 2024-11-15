@@ -1,0 +1,28 @@
+.tabBar {
+    display: flex;
+    height: 120rpx;
+    background-color: #fff;
+    border-top: 1rpx solid rgba(0, 0, 0, 0.06);
+}
+
+.tabBar-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    padding: 0 0rpx 18rpx 0rpx;
+    /* border-bottom: 4rpx rgba(48, 184, 156, 1) solid; */
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 32rpx;
+    font-weight: 600;
+}
+
+.line {
+    height: 5rpx;
+    width: 35rpx;
+    background-color: #30b89c;
+}

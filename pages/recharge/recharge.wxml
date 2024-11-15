@@ -1,0 +1,175 @@
+<!--pages/recharge/recharge.wxml-->
+<view class="header" style="padding-top:{{statusBarHeight}}">
+	<image src="/images/back.png"  bindtap="back"/>
+</view>
+<view class="h1">个人中心</view>
+<view class="my-card">
+	<image class="avater" src="{{avatarUrl||'../../images/logo.png'}}"/>
+	<view class="name">{{name}}</view>
+	<view class="userid" bind:tap="copy">id:{{userId}}</view>
+	<view class="myCard-bottom">
+		<view 
+			class="userType" 
+			style="color:{{userType == '普通用户'?'':'#2786f2'}}">
+			<image 
+				wx:if="{{userType == '普通用户'?false:true}}" 
+				src="/images/vip.png" />{{userType}}
+		</view>
+		<view 
+			wx:if="{{userType != '普通用户'}}" 
+			class="expire">
+			{{userType == '永久会员'?'永久会员':expire + ' 到期'}}
+		</view>
+	</view>
+</view>
+
+<view class="my-wallet">
+	<view class="ggb">
+		<view class="my-wallet-title">广告币</view>
+		<view class="count">{{ggb}}</view>
+	</view>
+	<view class="jtb">
+		<view class="my-wallet-title" >检讨币</view>
+		<view class="count" style="color:rgba(39, 134, 242, 1)">{{jtb}}</view>
+	</view>
+</view>
+
+<view class="tab-menu">
+	<view class="menu-item {{rechargeVipJtbShow?'actived':''}}" bind:tap="switchVipandjtb">会员&检讨币</view>
+	<view class="menu-item {{!rechargeVipJtbShow?'actived':''}}" bind:tap="switchAdReward">广告激励</view>
+</view>
+
+<!-- vip and jtb -->
+<view wx:if="{{rechargeVipJtbShow}}" class="recharge-item">
+	<view class="rechargeVip">
+		<view 
+			wx:for="{{vipList}}"
+			wx:key="new_money"
+			data-money="{{item.new_money}}" 
+			data-type="{{item.type}}"
+			class="{{vipMoney == item.new_money?'actived':''}} item" 
+			bindtap="chooseVip">
+			<view 
+				style="{{item.weight?'font-weight:700':''}}" 
+				wx:style="" 
+				class="desc">
+				{{item.name}}
+			</view>
+			<view class="money">
+				<view class="money-icon">￥</view>{{item.new_money}}
+			</view>
+			<view wx:if="{{item.new_money != item.old_money}}" class="old_money">
+				￥{{item.old_money}}
+			</view>
+			
+		</view>
+		<button class="rechargeBtn" type="button" bindtap="rechargeVip">确认支付</button>
+	</view>
+	<view class="rechargeJtb">
+		<view 
+			wx:for="{{jtbList}}" 
+			wx:key="id" 
+			data-id="{{item.id}}"
+			data-old_money="{{item.old_money}}" 
+			data-new_money_money="{{item.new_money}}" 
+			data-type="jtb"
+			class="item {{item.chooseStatus== true?'actived':''}}"
+			bindtap="chooseJtb">
+			<view class="descJtb" style="{{item.weight?'color:#1459F1':''}}">
+				{{item.name}}
+			</view>
+			<view class="pirce">
+				
+				<view class="money">
+					￥{{item.new_money}}
+				</view>
+				<view wx:if="{{item.new_money != item.old_money}}" class="old_money">
+					￥{{item.old_money}}
+				</view>
+			</view>
+			
+		</view>
+		<button class="rechargeBtn" type="button" bindtap="rechargeJtb">确认支付</button>
+		<view class="otherSay">虚拟产品不支持无理由退款，请谨慎选择</view>
+	</view>
+</view>
+<view wx:if="{{!rechargeVipJtbShow}}" class="adReward">
+	<view class="ditel">有效观看一次激励广告可获得一枚广告币。</view>
+	<button class="rechargeBtn" type="button" bindtap="watchAd" >看广告</button>
+	
+	<view class="little-title">兑换会员</view>
+	<view class="getVip">
+		<view 
+			wx:for="{{getVipList}}"
+			wx:key="index"
+			data-type="{{item.type}}"
+			class="{{ item.status?'actived':''}} getVip-item" 
+			bindtap="tapGetVipItem">
+			<view 
+				wx:style="" 
+				class="desc">
+				{{item.title}}
+			</view>
+			<view class="get-vip-ggb">
+				{{item.ggb}} 广告币
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="line"></view>
+
+<view class="little-title">说明与帮助</view>
+<view class="ditel">普通用户一次性充值15元，可联系客服免费领取永久会员。</view>
+<button open-type="contact" class="kf">联系客服</button>
+
+<view class="little-title">卡密充值</view>
+<input model:value="{{reChargeCode}}" placeholder="请输入兑换码"  />
+<button class="rechargeKmBtn" type="button" bindtap="dhm">立即兑换</button>
+
+
+<view class="line"></view>
+
+<view class="little-title">会员权益</view>
+
+<view class="qy">
+	<view class="item">
+		<image src="../../images/noad.png"/>
+		<view class="qy-title">
+			免广告
+		</view>
+		<view class="qy-detail">
+			免除开屏、导入模板、导入字体、导入模板的广告
+		</view>
+	</view>
+	<view class="item">
+		<image src="../../images/text.png"/>
+		<view class="qy-title">
+			不限字数
+		</view>
+		<view class="qy-detail">
+			制作生成的各类文章不再限制字数
+		</view>
+	</view>
+<view class="item">
+		<image src="../../images/sf.png"/>
+		<view class="qy-title">
+			背景缩放
+		</view>
+		<view class="qy-detail">
+			自由缩放文稿的背景图片，更好地适应各类场景
+		</view>
+	</view>
+<view class="item">
+		<image src="../../images/vip-server.png"/>
+		<view class="qy-title">
+			专属服务
+		</view>
+		<view class="qy-detail">
+			软件内显示会员标识，并拥有24小时专属客服服务
+		</view>
+	</view>
+
+
+
+</view>

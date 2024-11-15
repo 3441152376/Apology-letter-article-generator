@@ -1,0 +1,142 @@
+
+<view class="container">
+	<view class="header" style="margin-top:{{statusBarHeight}}">
+		<view class="header-title">
+			写锤子检讨书
+		</view>
+		<view class="oneWorld">
+			一键生成各类检讨文章
+		</view>
+	</view>
+	<view class="card">
+		<!-- 选择模板 -->
+		<view class="select-template">
+			<view class="select-header" bindtap="setPopup">
+				<view class="select-header-title">选择一个模板</view>
+				<view class="nowSelect">其他模板<image src="/images/inter_select.png"></image></view>
+			</view>
+			<view class="template-list" style="height:{{templateListHeight1}}">
+				<view
+					wx:for="{{templateList}}"
+					wx:key="objectId"
+					class="item {{item.objectId == nowTemplateId?'current':'no'}}"
+					bindtap="chooseTemplate"
+					data-id="{{item.objectId}}"
+				>
+					{{item.name}}
+				</view>
+
+			</view>
+		</view>
+		<view class="line"></view>
+		<!-- 填写信息 -->
+		<view class="topic">
+			<view class="title">
+				输入文章主题
+			</view>
+			<input
+				id="topic"
+				class="input {{isFocus.topic}}"
+				placeholder="想一个有趣的主题,比如上课睡觉？"
+				model:value="{{topic}}"
+				bindfocus="inputGetFocus"
+				bindblur="inputLoseFocus"
+			/>
+		</view>
+		<view class="number">
+			<view class="title">
+				输入文章字数
+			</view>
+
+			<input
+				id="number"
+				class="input {{isFocus.number}}"
+				type="number"
+				model:value="{{worldNumber}}"
+				bindfocus="inputGetFocus"
+				bindblur="inputLoseFocus"
+				placeholder="生成文章的字数"
+			/>
+		</view>
+		<view class="btn">
+			<button bindtap="toArticleShow">生成文章</button>
+		</view>
+		<navigator class="ai" url="../ai/chatList/chatList">
+			<view class="ai-icon">
+				<image src="../../images/ai.png" />
+			</view>
+			<view class="ai-text">
+				<view class="ai-title">
+					智能Ai
+				</view>
+				<view class="ai-content">
+					对话式人工智能文章生成
+				</view>
+			</view>
+			<image class="ai-enter" src="../../images/enter.png" />
+		</navigator>
+	</view>
+	<!-- 弹出层 -->
+	<van-popup
+		show="{{ popupShow }}"
+		round
+		position="bottom"
+		bind:close="setPopup"
+		lock-scrol
+		z-index="99999"
+	>
+	 	<view class="popup-content">
+			<view class="popup-header">
+				<view class="popup-header-title">我的模板</view>
+				<image src="/images/edit_template.png" bindtap="showDelete" />
+			</view>
+			<view class="popup-templateList">
+				<view
+					wx:for="{{templateList}}"
+					wx:key="objectId"
+					class="item {{item.objectId == nowTemplateId?'current':'no'}}"
+					bindtap="chooseTemplate"
+					data-id="{{item.objectId}}"
+				>
+					{{item.name}}
+					<view 
+						class="delete" 
+						catchtap="deleteTemplate"
+						wx:if="{{deleteShow}}"
+						id="{{item.objectId}}">
+						x
+					</view>
+				</view>
+			</view>
+			<view class="popup-getMore" bindtap="getMore">
+				获取更多模板
+			</view>
+		</view>
+		
+	</van-popup>
+	<!-- 公告 -->
+	<van-popup
+		show="{{ noticePopupShow }}"
+		round
+		position="bottom"
+		bind:close="closeNoticPopup"
+		lock-scrol
+		z-index="99999"
+	>
+	 	<view class="popup-content">
+			<view class="popup-header">
+				<view class="popup-header-title">公告</view>
+			</view>
+			<view class="notice-content">
+				<text user-select>{{notice}}</text>
+			</view>
+			<view class="check-me" bindtap="checkMe">
+				点我查看
+			</view>
+			<view class="awaitMe" bindtap="awaitMe">
+				稍后再看
+			</view>
+		</view>
+		
+	</van-popup>
+</view>

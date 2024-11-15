@@ -1,0 +1,72 @@
+.container {
+    padding-bottom: 120rpx;
+}
+
+
+/* 头部 */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 145rpx;
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+    border-bottom: 1rpx solid rgba(0, 0, 0, 0.06);
+    padding-bottom: 15rpx;
+}
+
+.header .header-title {
+    color: rgba(0, 0, 0, 1);
+    font-size: 40rpx;
+    font-weight: 700;
+}
+
+.header .oneWorld {
+    font-size: 30rpx;
+    color: rgba(0, 0, 0, 0.45);
+    margin-top: 7rpx;
+}
+
+.tools-list {
+    display: flex;
+    padding: 25rpx;
+    flex-wrap: wrap;
+}
+
+.tools-item {
+    width: 50%;
+    /* height: 190rpx; */
+    /* padding: 30rpx; */
+    /* overflow: hidden; */
+}
+
+.icon {
+    width: 80rpx;
+    height: 80rpx;
+    margin: 25rpx;
+}
+
+.tools-item .link {
+    margin: 20rpx;
+    /* padding: 40 rpx; */
+    background: rgba(48, 184, 156, 1);
+    border-radius: 15rpx;
+}
+
+.title {
+    color: #fff;
+}
+
+.isvip {
+    height: 40rpx;
+    width: 40rpx;
+}
+
+.bottom {
+    margin: 0rpx 25rpx 25rpx 25rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80rpx;
+}

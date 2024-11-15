@@ -1,0 +1,25 @@
+<view class="header" style="padding-top:{{statusBarHeight}}">
+	<image src="/images/back.png"  bindtap="back"/>
+</view>
+<view class="h1">{{params.name}}</view>
+
+<view class="input-area">
+    <input
+        class="input {{isFocus}}"
+        placeholder="{{params.params[0].hint}}"
+        model:value="{{inputText}}"
+        bindfocus="inputGetFocus"
+        bindblur="inputLoseFocus"
+    />
+</view>
+
+<view class="btn">
+    <button bindtap="make">确定</button>
+</view>
+
+<view class="result-title">
+    结果
+</view>
+<view class="content" bindap="copy">
+{{content}}
+</view>

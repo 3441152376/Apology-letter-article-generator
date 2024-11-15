@@ -1,0 +1,74 @@
+
+<view class="header" style="padding-top:{{statusBarHeight}}">
+    <view class="header-left">
+         <image src="/images/back.png"  bindtap="back"/>
+    </view>
+</view>
+
+<view class="top">
+    <image src="/images/ai.png" />
+    <view class="title">
+        人工智能创作
+    </view>
+    <view class="title2">
+        AI Creation.
+    </view>
+</view>
+
+<view class="createHeader">
+    <view class="createTitle">
+        创作要求
+    </view>
+    <view class="example" bind:tap="setExamplePopup">
+        示例
+    </view>
+</view>
+<view class="input">
+    <textarea class="inputText" 
+            placeholder="提一个创作主题,比如帮我写一篇检讨书?"
+            maxlength="-1"
+            auto-height="true"
+            model:value="{{content}}"
+    />
+</view>
+
+<view class="btn" bind:tap="sendContent">
+    发送需求
+</view>
+
+<view class="bottom">
+    Based on OpenAI API (gpt-3.5-turbo).
+</view>
+
+<!-- 示例弹出层 -->
+<van-popup
+		show="{{ examplePopupShow }}"
+		round
+		position="bottom"
+		bind:close="closeNoticPopup"
+		lock-scrol
+		z-index="99999"
+	>
+	 	<view class="popup-content">
+			<view class="popup-header">
+				<view class="popup-header-title">帮助示例</view>
+			</view>
+			<view class="notice-content">
+				<text user-select>Ai创作助手经常在以下场合被使用：
+1.知识问答，花式做作业。
+2.写文案、小说、、检讨书、读后感、作业、做题、论文、脚本、工作报告等内容。
+3.翻译、文章润色。
+4.信息统计、表格制作。
+5.无偿陪聊、编故事。
+
+例1：写一份关于上课睡觉500字的学生检讨书
+例2：把下面的话翻译成日语：我是张三，很高兴认识你。
+例3：出一套包含五道选择题的十以内数学试卷。
+例4：今天我心情不好你能安慰一下我嘛</text>
+			</view>
+			<view class="useExample" bindtap="useExample">
+				使用示例
+			</view>
+		</view>
+		
+	</van-popup>
